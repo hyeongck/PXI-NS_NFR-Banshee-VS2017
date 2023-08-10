@@ -1,0 +1,913 @@
+[HANDLER_INFO]
+ENABLE=FALSE
+
+[Model]
+MXG01 = None
+MXG02 = None
+MXA01 = None
+MXA02 = None
+SMU = NIPXI
+Switch =  SW_NI6509
+ENA = None
+PWRSUPPLY = None
+PWRSUPPLY_1CH = None
+DCSUPPLY01 = None
+DCSUPPLY02 = None
+DCSUPPLY03 = None
+DCSUPPLY04 =  None
+MIPI_Card = NI6570
+PWRMETER = NRPZ11
+FILTER=None
+PXI_VST = NI5646R
+
+
+[Address]
+MXG01 = VST_01
+MXG02 = None
+MXA01 = VST_01
+MXA02 = None
+SMU = NI4139_01
+Switch = Dev1,Dev2
+ENA = None
+PWRSUPPLY = PS01
+PWRSUPPLY_1CH = DC01
+DCSUPPLY01 = DC01
+DCSUPPLY02 = DC01
+DCSUPPLY03 = DC03
+DCSUPPLY04 = DC04
+MIPI_Card = NI6570
+PWRMETER = *
+FILTER = None
+PXI_VST = VST_01
+APXI_FileName = LightningNF_Rev01.amap
+
+[MIPI_Config]
+Channel_Used = 0
+Slave_Address = E
+Channel2_Used = 1
+Slave2_Address = C
+PM_Trig = 1C
+PM_Trig_Data = 07
+Read_Function = true
+
+[MIPI_PIN_CFG]
+Mipi_Pair_Count = 2
+SCLK_0 = 0
+SDATA_0 = 1
+SVIO_0 = 2
+'
+SCLK_1 = 4
+SDATA_1 = 5
+SVIO_1 = 3
+'
+'SCLK_1 = 6
+'SDATA_1 = 4
+'SVIO_1 = 8
+
+[Switching Band]
+'NON CA Band Path
+B1TX_B1RX = P0_27;P1_115;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B3TX_B3RX = P0_4;P1_147;P3_0;P4_0;P5_1@P0_164;P1_0;P2_0
+B4TX_B4RX = P0_4;P1_115;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B7TX_B7RX = P0_224;P1_43;P3_0;P4_0;P5_1@P0_18;P1_1;P2_0
+B25TX_B25RX  = P0_17;P1_115;P3_0;P4_0;P5_1@P0_64;P1_1;P2_0
+B30TX_B30RX = P0_32;P1_51;P3_0;P4_0;P5_1@P0_0;P1_1;P2_0
+B11TX_B11RX = P0_0;P1_131;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+B21TX_B21RX = P0_0;P1_131;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+'B1TX_B32RX = P0_27;P1_3;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+B3TX_B32RX = P0_4;P1_3;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+'B7TX_B32RX = P0_224;P1_3;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+'
+'CA Band Path
+'
+'RX CONTACT PATH/NF Rise Measure
+B1RX_CONTACT_ANT1_NFR = P0_0;P1_118;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B3RX_CONTACT_ANT1_NFR = P0_0;P1_214;P3_0;P4_0;P5_1@P0_164;P1_0;P2_0
+B4RX_CONTACT_ANT1_NFR = P0_0;P1_118;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B7RX_CONTACT_ANT1_NFR = P0_0;P1_46;P3_0;P4_0;P5_1@P0_18;P1_1;P2_0
+B25RX_CONTACT_ANT1_NFR = P0_0;P1_118;P3_0;P4_0;P5_1@P0_64;P1_1;P2_0
+B30RX_CONTACT_ANT1_NFR = P0_0;P1_54;P3_0;P4_0;P5_1@P0_0;P1_1;P2_0
+B66RX_CONTACT_ANT1_NFR = P0_0;P1_118;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B11RX_CONTACT_ANT1_NFR = P0_0;P1_134;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+B21RX_CONTACT_ANT1_NFR = P0_0;P1_134;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+B32RX_CONTACT_ANT1_NFR = P0_0;P1_6;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+'
+'RX CONTACT PATH/Absolute NF Measure
+B1RX_CONTACT_ANT1 = P0_0;P1_22;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B3RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B4RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B7RX_CONTACT_ANT2 = P0_0;P1_14;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B25RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B30RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B66RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B32RX_CONTACT_ANT2 = P0_0;P1_6;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B34RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B39RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B40ARX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B40RX_CONTACT_ANT1 = P0_0;P1_22;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B53RX_CONTACT_ANT2 = P0_0;P1_22;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B41RX_CONTACT_ANT2 = P0_0;P1_14;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B41HRX_CONTACT_ANT2 = P0_0;P1_14;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B11RX_CONTACT_ANT1 = P0_0;P1_6;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B21RX_CONTACT_ANT1 = P0_0;P1_6;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+'
+
+[Switching Band_HotNF]
+'NON CA Band Path for NF (NF Rise Measure)
+B1TX_B1RX_ANT1_TERM_NFR = P0_27;P1_113;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B3TX_B3RX_ANT1_TERM_NFR =  P0_4;P1_145;P3_0;P4_0;P5_1@P0_164;P1_0;P2_0
+B4TX_B4RX_ANT1_TERM_NFR =  P0_4;P1_113;P3_0;P4_0;P5_1@P0_73;P1_1;P2_0
+B7TX_B7RX_ANT1_TERM_NFR = P0_224;P1_41;P3_0;P4_0;P5_1@P0_18;P1_1;P2_0
+B25TX_B25RX_ANT1_TERM_NFR = P0_17;P1_113;P3_0;P4_0;P5_1@P0_64;P1_1;P2_0
+B30TX_B30RX_ANT1_TERM_NFR = P0_32;P1_49;P3_0;P4_0;P5_1@P0_0;P1_1;P2_0
+B11TX_B11RX_ANT1_TERM_NFR = P0_0;P1_129;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+B21TX_B21RX_ANT1_TERM_NFR = P0_0;P1_129;P3_0;P4_0;P5_1@P0_128;P1_0;P2_0
+B32TX_B32RX_ANT1_TERM_NFR = P0_4;P1_1;P3_0;P4_0;P5_1@P0_0;P1_0;P2_0
+'B1TX_B32RX_ANT1_TERM_NFR = P0_27;P1_1;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+B3TX_B32RX_ANT1_TERM_NFR = P0_4;P1_1;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+'B7TX_B32RX_ANT1_TERM_NFR = P0_224;P1_1;P3_1;P4_1;P5_1@P0_0;P1_0;P2_0
+'
+'NON CA Band Path for NF (Absolute NF Measure)
+B1TX_B1RX_ANT1_TERM = P0_0;P1_16;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B3TX_B3RX_ANT2_TERM =  P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B4TX_B4RX_ANT2_TERM =  P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B7TX_B7RX_ANT2_TERM = P0_0;P1_8;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B25TX_B25RX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B30TX_B30RX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B32TX_B32RX_ANT2_TERM = P0_0;P1_0;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B34TX_B34RX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B39TX_B39RX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B40ATX_B40ARX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B40TX_B40RX_ANT1_TERM = P0_0;P1_16;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B53TX_B53RX_ANT2_TERM = P0_0;P1_16;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B41TX_B41RX_ANT2_TERM = P0_0;P1_8;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B41HTX_B41HRX_ANT2_TERM = P0_0;P1_8;P3_8;P4_8;P5_2@P0_0;P1_0;P2_0
+B11TX_B11RX_ANT1_TERM = P0_0;P1_0;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+B21TX_B21RX_ANT1_TERM = P0_0;P1_0;P3_8;P4_8;P5_1@P0_0;P1_0;P2_0
+'
+ANT1_TX = P0_0;P1_6;P3_0;P4_0;P5_1@P0_0;P1_0;P2_0
+ANT2_TX = P0_0;P1_6;P3_0;P4_0;P5_2@P0_0;P1_0;P2_0
+'
+[NFCA_CALTAG]
+'
+[NF_NONCA_CALTAG]
+'Band 1
+B1TX_B1RX = TX@RFIN_TXB1;MXA1@RFOUT_RXB1B4B66;ANT@ANT1_TX
+'
+'Band 3
+B3TX_B3RX = TX@RFIN_TXB3;MXA1@RFOUT_RXB3;ANT@ANT1_TX
+'
+'Band 4
+B4TX_B4RX = TX@RFIN_TXB4;MXA1@RFOUT_RXB1B4B66;ANT@ANT1_TX
+'
+'Band 7
+B7TX_B7RX = TX@RFIN_TXB7;MXA1@RFOUT_RXB7;ANT@ANT1_TX
+'
+'Band 25
+B25TX_B25RX = TX@RFIN_TXB25;MXA1@RFOUT_RXB25;ANT@ANT1_TX
+'
+'Band 30
+B30TX_B30RX = TX@RFIN_TXB30;MXA1@RFOUT_RXB30;ANT@ANT1_TX
+'
+'Band 11
+B11TX_B11RX = TX@RFIN_TXB11;MXA1@RFOUT_RXB11;ANT@ANT1_TX
+'
+'Band 21
+B21TX_B21RX = TX@RFIN_TXB21;MXA1@RFOUT_RXB21;ANT@ANT1_TX
+'
+'Band 32
+'B1TX_B32RX = TX@RFIN_TXB1;MXA1@RFOUT_RXB32;ANT@ANT1_TX
+B3TX_B32RX = TX@RFIN_TXB3;MXA1@RFOUT_RXB32;ANT@ANT1_TX
+'B7TX_B32RX = TX@RFIN_TXB7;MXA1@RFOUT_RXB32;ANT@ANT1_TX
+'
+'RX CONTACT (NF Rise Measure)
+B1RX_CONTACT_ANT1_NFR = TX@RFIN_TXB1;MXA1@RFOUT_RXB1B4B66;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B2RX_CONTACT_ANT1_NFR = TX@RFIN_TXB2;MXA1@RFOUT_RXB2;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B3RX_CONTACT_ANT1_NFR = TX@RFIN_TXB3;MXA1@RFOUT_RXB3;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B4RX_CONTACT_ANT1_NFR = TX@RFIN_TXB4;MXA1@RFOUT_RXB1B4B66;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B7RX_CONTACT_ANT1_NFR = TX@RFIN_TXB7;MXA1@RFOUT_RXB7;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT3;
+B25RX_CONTACT_ANT1_NFR = TX@RFIN_TXB25;MXA1@RFOUT_RXB25;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B30RX_CONTACT_ANT1_NFR = TX@RFIN_TXB30;MXA1@RFOUT_RXB30;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B11RX_CONTACT_ANT1_NFR = TX@RFIN_TXB11;MXA1@RFOUT_RXB11;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT4;
+B21RX_CONTACT_ANT1_NFR = TX@RFIN_TXB21;MXA1@RFOUT_RXB21;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT4;
+B32RX_CONTACT_ANT1_NFR = TX@RFIN_TXB3;MXA1@RFOUT_RXB32;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT4;
+'
+'RX CONTACT (Absolute NF Measure)
+B1RX_CONTACT_ANT1 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B3RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B4RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B7RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT3;
+B25RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B30RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B39RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B40ARX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B40RX_CONTACT_ANT1 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT1;
+B53RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B34RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT1;
+B41RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT3;
+B41HRX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT3;
+B32RX_CONTACT_ANT2 = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT2;LOSS_IN@ANT2;LOSS_OUT@PRX_OUT4;
+B11RX_CONTACT_ANT1 = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT4;
+B21RX_CONTACT_ANT1 = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT1;LOSS_IN@ANT1;LOSS_OUT@PRX_OUT4;
+'
+'HOT NF (NF Rise Measure)
+B1TX_B1RX_ANT1_TERM_NFR = TX@RFIN_TXB1;MXA1@RFOUT_RXB1B4B66;ANT@RX_CONTACT_ANT1
+B3TX_B3RX_ANT1_TERM_NFR = TX@RFIN_TXB3;MXA1@RFOUT_RXB3;ANT@RX_CONTACT_ANT1
+B4TX_B4RX_ANT1_TERM_NFR = TX@RFIN_TXB4;MXA1@RFOUT_RXB1B4B66;ANT@RX_CONTACT_ANT1
+B7TX_B7RX_ANT1_TERM_NFR = TX@RFIN_TXB7;MXA1@RFOUT_RXB7;ANT@RX_CONTACT_ANT1
+B25TX_B25RX_ANT1_TERM_NFR = TX@RFIN_TXB25;MXA1@RFOUT_RXB25;ANT@RX_CONTACT_ANT1
+B30TX_B30RX_ANT1_TERM_NFR = TX@RFIN_TXB30;MXA1@RFOUT_RXB30;ANT@RX_CONTACT_ANT1
+B11TX_B11RX_ANT1_TERM_NFR = TX@RFIN_TXB11;MXA1@RFOUT_RXB11;ANT@RX_CONTACT_ANT1
+B21TX_B21RX_ANT1_TERM_NFR = TX@RFIN_TXB21;MXA1@RFOUT_RXB21;ANT@RX_CONTACT_ANT1
+B32TX_B32RX_ANT1_TERM_NFR = TX@NONE;MXA1@RFOUT_RXB32;ANT@RX_CONTACT_ANT1
+'B1TX_B32RX_ANT1_TERM_NFR = TX@RFIN_TXB1;MXA1@RFOUT_RXB32;ANT@RX_CONTACT_ANT1
+B3TX_B32RX_ANT1_TERM_NFR = TX@RFIN_TXB3;MXA1@RFOUT_RXB32;ANT@RX_CONTACT_ANT1
+'B7TX_B32RX_ANT1_TERM_NFR = TX@RFIN_TXB7;MXA1@RFOUT_RXB32;ANT@RX_CONTACT_ANT1
+'
+'HOT NF (Absolute NF Measure)
+B1TX_B1RX_ANT1_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT1
+B3TX_B3RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B4TX_B4RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B7TX_B7RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2
+B25TX_B25RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B30TX_B30RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B32TX_B32RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT2
+B34TX_B34RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B39TX_B39RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B40ATX_B40ARX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B40TX_B40RX_ANT1_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT1
+B53TX_B53RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT1;ANT@RX_CONTACT_ANT2
+B41TX_B41RX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2
+B41HTX_B41HRX_ANT2_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT3;ANT@RX_CONTACT_ANT2
+B11TX_B11RX_ANT1_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT1
+B21TX_B21RX_ANT1_TERM = TX@NONE;MXA1@RFOUT_RXTDDOUT4;ANT@RX_CONTACT_ANT1
+'
+ALL_ANT_TERM = TX@NONE;MXA1@NONE;ANT@NONE
+'
+[NFCA_MXA_Config]
+'Band 1
+B1TX_B1RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 3
+B3TX_B3RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 4
+B4TX_B4RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 7
+B7TX_B7RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'Band 25
+B25TX_B25RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 30
+B30TX_B30RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 32
+B32TX_B32RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'B1TX_B32RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+B3TX_B32RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'B7TX_B32RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 34
+B34TX_B34RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 39
+B39TX_B39RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 40A
+B40ATX_B40ARX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 40
+B40TX_B40RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 53
+B53TX_B53RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 41
+B41TX_B41RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 41H
+B41HTX_B41HRX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 11
+B11TX_B11RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'BAnd 21
+B21TX_B21RX = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@-20;NoPoints@601;SweepT@150
+'
+'RX CONTACT PATH (NFR Measure)
+B1RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B2RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B3RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B4RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B7RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B25RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B30RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B11RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B21RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+B32RX_CONTACT_ANT1_NFR = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@10;NoPoints@601;SweepT@150
+'
+'
+'RX CONTACT PATH (Absolute NF Measure)
+B1RX_CONTACT_ANT1 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B2RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B3RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B4RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B7RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B25RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B30RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B32RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B34RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B39RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B40ARX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B40RX_CONTACT_ANT1 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B53RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B41RX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B41HRX_CONTACT_ANT2 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B11RX_CONTACT_ANT1 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+B21RX_CONTACT_ANT1 = RBW@1e6;VBW@800;Span@65e6;Attn@10;RefLvl@5;NoPoints@601;SweepT@150
+'
+[TESTBOARD_LOSS]
+'Usage : assumption of loss must be characterize by PE
+'Assumption made was that all freq has similar loss
+'Loss are in dB -ve , Gain are in dB +ve
+INPUTLOSS = 0
+OUTPUTLOSS = 0
+
+[SmuSetting]
+'Total SMU channel available = TOTAL_SMUCHANNEL
+'if AM1340C with 371 card , total channel will be 9
+'usage: voltage = PowerSupply_ChannelUse_Model
+'PowerSupply currently support max 3 units in a system prefix = P1, P2, P3
+'Channel currently support channel 1-8(Aemulus, Ni) and channel a, b(keithley)
+'For NI PXI (4143,4139,4154) 
+'the visaAlias in NI MAX must in this format P1_Ch0_NI4154_NI4154P1 where NI4154P1 is visaAlias
+'Note : Visa alias must follow SMU model number and no underscore (eg. NI4154_P1). Must be in one word
+'Model currently support and prefix as below:
+'
+'
+'
+'
+'
+'
+'
+'
+'       AM471E = AM471E
+'       AM430E = AM430E
+'
+TOTAL_SMUCHANNEL  = 3
+SMUV_CH0 = P1_Ch0_NI4139_NI4139P1
+SMUV_CH1 = P1_Ch0_NI4139_NI4139P2
+SMUV_CH2 = P1_Ch0_NI4143_NI4143P3
+SMUV_CH3 = P1_Ch2_NI4143_NI4143P1
+SMUV_CH4 = P1_Ch4_Ae1340
+SMUV_CH5 = P1_Ch0_AM471E_AM471E01
+SMUV_CH6 = P1_Ch0_AM471E_AM471E02
+SMUV_CH7 = P1_Ch1_NI4143_NI4143P1
+'
+'
+'MIPI Pin (0 = Tx / 1 = Rx)
+'CLK = SCLKP0, SCLKP1
+'DATA = SDATAP0, SDATAP1
+'VIO = VIOP0, VIOP1
+'
+TOTAL_PPMUCHANNEL = 2
+PPMUV_CH0 = P1_Ch0_VIOP0_NI6570
+PPMUV_CH1 = P1_Ch0_VIOP1_NI6570
+'PPMUV_CH2 = P1_Ch0_VIOP0_DM482E
+'PPMUV_CH3 = P1_Ch0_VIOP1_DM482E
+
+
+[OFF_AfterTest]
+DC = false
+SMU = true
+
+[STOP_ON_FAIL]
+ENABLE = false
+
+[FilePath]
+Cal_Enable = true
+CalPath = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\Lightning_NF_Rise_Rev04.csv
+CalFreqListRF_TXB1 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB1.csv
+CalFreqListRF_TXB25 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB25.csv
+CalFreqListRF_TXB3 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB3.csv
+CalFreqListRF_TXB4 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB4.csv
+CalFreqListRF_TXB7 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB7.csv
+CalFreqListRF_TXB30 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB30.csv
+CalFreqListRF_TXB11 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB11.csv
+CalFreqListRF_TXB21 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TXB21.csv
+'
+CalFreqListRF_RXB1B4B66 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB1B4B66.csv
+CalFreqListRF_RXB25 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB25.csv
+CalFreqListRF_RXB3 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB3.csv
+CalFreqListRF_RXB7 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB7.csv
+CalFreqListRF_RXB30 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB30.csv
+CalFreqListRF_RXB11 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB11.csv
+CalFreqListRF_RXB21 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB21.csv
+CalFreqListRF_RXB32 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXB32.csv
+'
+CalFreqListRF_RXTDDOUT1 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXTDDOUT1.csv
+CalFreqListRF_RXTDDOUT2 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXTDDOUT2.csv
+CalFreqListRF_RXTDDOUT3 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXTDDOUT3.csv
+CalFreqListRF_RXTDDOUT4 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RXTDDOUT4.csv
+'
+CalFreqListRF_CONTACT_ANT1 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RX_CONTACT_ANT1.csv
+CalFreqListRF_CONTACT_ANT2 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_RX_CONTACT_ANT2.csv
+'
+CalFreqListRF_ANT1 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TX_ANT1.csv
+CalFreqListRF_ANT2 = C:\Avago.ATF.Common\Input\Calibration\Lightning_NF\RF_Flist_TX_ANT2.csv
+'
+BenchDataPath = C:\Temp\
+
+[OCR]
+Enable = false
+Site = 1
+ResultDefaultPath = C:\Avago.ATF.Common\Results\
+VisionDefaultPath = \\192.168.3.401\Log\Tester 1\Data\
+ImagePath = \\192.168.3.201\Log\Tester 1\Image\
+SdiserverPath = \\192.168.2.100\ftp\AVAGO\SDI_INBOX_OCR\
+
+
+[Cal_RF_TXB1]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB1
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 10
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB1
+SwitchControl = P0_27;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning MB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB25]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB25
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 10
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB25
+SwitchControl = P0_17;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning MB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB3]
+'Note : TXB3 and  sharing same cal freq and cal factor
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB3
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 10
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB3
+SwitchControl = P0_4;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning MB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB4]
+'Note : TXB4 and  sharing same cal freq and cal factor
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB4
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 10
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB4
+SwitchControl = P0_4;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning MB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB7]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB7
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 0
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB7
+SwitchControl = P0_224;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning HB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB30]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB30
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 0
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB30
+SwitchControl = P0_32;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning HB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB11]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB11
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 0
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB11
+SwitchControl =  P0_0;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning LMB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_TXB21]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = -20
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFIN_TXB21
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = 0
+CalLimitHigh = 22
+CalFreqList = CalFreqListRF_TXB21
+SwitchControl =  P0_0;P1_1;P3_0;P4_0;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning LMB_TX Cable to Power Sensor (with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_RXB3]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB3
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB3
+SwitchControl = P0_0;P1_144;P3_0;P4_0;P5_0@P0_164;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT1 cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB25]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB25
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB25
+SwitchControl = P0_0;P1_112;P3_0;P4_0;P5_0@P0_64;P1_1;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT1 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB30]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB30
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB30
+SwitchControl = P0_0;P1_48;P3_0;P4_0;P5_0@P0_0;P1_1;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT1 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB1B4B66]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB1B4B66
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB1B4B66
+SwitchControl = P0_0;P1_112;P3_0;P4_0;P5_0@P0_73;P1_1;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT1 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXTDDOUT1]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXTDDOUT1
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXTDDOUT1
+SwitchControl = P0_0;P1_16;P3_8;P4_8;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT1 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXTDDOUT2]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXTDDOUT2
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXTDDOUT2
+SwitchControl = P0_0;P1_16;P3_8;P4_8;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT2 Cable to SG1 and click OK
+Skip = True
+
+[Cal_RF_RXB7]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB7
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB7
+SwitchControl = P0_0;P1_40;P3_0;P4_0;P5_0@P0_18;P1_1;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT3 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXTDDOUT3]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXTDDOUT3
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXTDDOUT3
+SwitchControl = P0_0;P1_8;P3_8;P4_8;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT3 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB11]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB11
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB11
+SwitchControl = P0_0;P1_128;P3_0;P4_0;P5_0@P0_128;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT4 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB21]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB21
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB21
+SwitchControl = P0_0;P1_128;P3_0;P4_0;P5_0@P0_128;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT4 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXB32]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXB32
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@0;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXB32
+SwitchControl = P0_0;P1_0;P3_1;P4_1;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT4 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RXTDDOUT4]
+Type = PXI_RF_LOPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NI5646R
+Measure_Channel = 1
+PowerLevel = -30
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RFOUT_RXTDDOUT4
+Source_CalFactor = None
+SA_CONFIG = RBW@1e6;VBW@300;Span@65e6;Attn@0;RefLvl@-20;NoPoints@50;SweepT@100
+CalOffset = 0
+CalLimitLow = -10
+CalLimitHigh = 20
+CalFreqList = CalFreqListRF_RXTDDOUT4
+SwitchControl = P0_0;P1_0;P3_8;P4_8;P5_0@P0_0;P1_0;P2_0
+MessageBox = Please, connect the Lightning PRX_OUT4 Cable to SG1 and click OK
+Skip = False
+
+[Cal_ANT1_Tx]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = 0
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = ANT1_TX
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 0
+CalLimitLow = -40
+CalLimitHigh = -22
+CalFreqList = CalFreqListRF_ANT1
+SwitchControl = P0_0;P1_2;P3_0;P4_0;P5_1@P0_0;P1_0;P2_0
+MessageBox = Make sure PowerSensor Cable connected as per original setup, then connect the ANT1 Cable to SG1 and click OK
+Skip = False
+
+[Cal_ANT2_Tx]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP8S
+Measure_Channel = 1
+PowerLevel = 0
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = ANT2_TX
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 0
+CalLimitLow = -40
+CalLimitHigh = -22
+CalFreqList = CalFreqListRF_ANT2
+SwitchControl = P0_0;P1_2;P3_0;P4_0;P5_2@P0_0;P1_0;P2_0
+MessageBox = Make sure PowerSensor Cable connected as per original setup, then connect the ANT2 Cable to SG1 and click OK
+Skip = False
+
+[Cal_RF_RX_CONTACT_ANT1]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP11
+Measure_Channel = 1
+PowerLevel = 5
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RX_Contact_ANT1
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = -40
+CalLimitHigh = 0
+CalFreqList = CalFreqListRF_CONTACT_ANT1
+SwitchControl = P0_0;P1_6;P3_0;P4_0;P5_1@P0_0;P1_0;P2_0
+MessageBox = Please, connect back the original cable path of SG and connect the Lightning ANT1 Cable to PowerSensor(with 6dB attenuator) and click OK
+Skip = False
+
+[Cal_RF_RX_CONTACT_ANT2]
+Type = PXI_RF_HIPWR_CAL
+Source1_Model = NI5646R
+Source2_Model = NONE
+Meas_Model = NRP11
+Measure_Channel = 1
+PowerLevel = 5
+Modulation_Format = CW
+Source_Waveform_Mode = NONE
+Target_CalSegment = RX_Contact_ANT2
+Source_CalFactor = None
+SA_CONFIG = NONE
+CalOffset = 6
+CalLimitLow = -40
+CalLimitHigh = 0
+CalFreqList = CalFreqListRF_CONTACT_ANT2
+SwitchControl = P0_0;P1_6;P3_0;P4_0;P5_2@P0_0;P1_0;P2_0
+MessageBox = Please, connect back the original cable path of SG and connect the Lightning ANT2 Cable to PowerSensor(with 6dB attenuator) and click OK
+Skip = False
+
